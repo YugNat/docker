@@ -1,4 +1,4 @@
-#VERSION 0.1
+#VERSION 0.5
 
 FROM dockerfile/java
 ENV http_proxy http://vipproxy1.prod.extelia.fr:8080
