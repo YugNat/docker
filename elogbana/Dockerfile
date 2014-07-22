@@ -29,8 +29,11 @@ ADD logstash.conf /opt/logstash-1.4.2/conf/
 # Add start script
 ADD start.sh /root/
 
-# Expose nginx and ES ports.
-EXPOSE 80 9200
-
 # Define mountable directories.
 VOLUME ["/data"]
+
+# Define default command.
+CMD /root/start.sh
+
+# Expose nginx and ES ports.
+EXPOSE 80 9200

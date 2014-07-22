@@ -1,13 +1,17 @@
-## Test Dockerfile
+# YugNat's Dockerfile
 
 
 This repository contains **Dockerfiles** of varius tests for [Docker](https://www.docker.io/) published to the public.
 
 
-### Dependencies
+## Dependencies
 
 * [dockerfile/ubuntu](http://dockerfile.github.io/#/ubuntu)
 
+
+## Elogbana
+
+is a dock with logstash, elasticsearch, nginx and kibana parsing all logs in your /data.
 
 ### Installation
 
@@ -19,5 +23,5 @@ This repository contains **Dockerfiles** of varius tests for [Docker](https://ww
 ### Usage
 
     Put *.log in your /data
-    docker run -it --rm -p 80:80 -p 9200:9200 -v /data:/data test/logstash start.sh
-    http://localhost
+    docker run -it --rm -p 80:80 -p 9200:9200 -v /data:/data test/logstash
+    After few seconds, open `http://localhost` to see the welcome page.
