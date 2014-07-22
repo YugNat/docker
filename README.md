@@ -24,4 +24,4 @@ is a dock with logstash, elasticsearch, nginx and kibana parsing all logs in you
 
     Put *.log in your /data
     docker run -it --rm -p 80:80 -p 9200:9200 -v /data:/data test/logstash
-    After few seconds, open `http://localhost` to see the welcome page.
+  After few seconds, open `http://localhost` to see the welcome page.
