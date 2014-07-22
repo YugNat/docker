@@ -3,6 +3,8 @@
 # Pull base image.
 FROM dockerfile/ubuntu
 
+MAINTAINER YugNat
+
 # Set environment variables.
 ENV http_proxy http://vipproxy1.prod.extelia.fr:8080
 ENV https_proxy http://vipproxy1.prod.extelia.fr:8080
@@ -23,6 +25,9 @@ RUN curl https://download.elasticsearch.org/kibana/kibana/kibana-3.1.0.tar.gz | 
 # Add conf files.
 ADD nginx.conf /etc/nginx/
 ADD logstash.conf /opt/logstash-1.4.2/conf/
+
+# Add start script
+ADD start.sh /root/
 
 # Expose nginx and ES ports.
 EXPOSE 80 9200
