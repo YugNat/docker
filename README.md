@@ -12,6 +12,7 @@ This repository contains **Dockerfiles** of varius tests for [Docker](https://ww
 ## Elogbana
 
 is a dock with logstash, elasticsearch, nginx and kibana parsing all logs in your /data.
+You can use json ressources and init script to create a Shakespeare lucene and test it with Shakespeare's kibana dashboad.
 
 ### Installation
 
