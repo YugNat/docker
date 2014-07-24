@@ -23,11 +23,11 @@ RUN curl https://download.elasticsearch.org/elasticsearch/elasticsearch/elastics
 RUN curl https://download.elasticsearch.org/kibana/kibana/kibana-3.1.0.tar.gz | tar xzC /opt/ && mv /opt/kibana* /opt/kibana
 
 # Add conf files.
-ADD nginx.conf /etc/nginx/
-ADD logstash.conf /opt/logstash-1.4.2/conf/
+ADD conf/nginx.conf /etc/nginx/
+ADD conf/logstash.conf /opt/logstash-1.4.2/conf/
 
 # Add start script
-ADD start.sh /root/
+ADD scripts/start.sh /root/
 
 # Define mountable directories.
 VOLUME ["/data"]
