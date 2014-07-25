@@ -15,4 +15,4 @@ curl -XPUT http://localhost:9200/shakespeare -d '
 
 sleep 2
 
-curl -XPUT localhost:9200/_bulk --data-binary @shakespeare.json
+curl -XPUT localhost:9200/_bulk --data-binary @../ressources/shakespeare.json
