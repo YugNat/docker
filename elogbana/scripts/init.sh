@@ -1,3 +1,4 @@
+unset http_proxy
 curl -XPUT http://localhost:9200/shakespeare -d '
 {
  "mappings" : {
