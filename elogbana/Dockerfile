@@ -5,11 +5,6 @@ FROM dockerfile/ubuntu
 
 MAINTAINER YugNat
 
-# Set environment variables.
-ENV http_proxy http://vipproxy1.prod.extelia.fr:8080
-ENV https_proxy http://vipproxy1.prod.extelia.fr:8080
-ENV ftp_proxy http://vipproxy1.prod.extelia.fr:8080
-
 # Install.
 RUN \
   echo debconf shared/accepted-oracle-license-v1-1 select true | debconf-set-selections && \
