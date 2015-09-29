@@ -9,7 +9,7 @@ This repository contains **Dockerfiles** of varius tests for [Docker](https://ww
 * [dockerfile/ubuntu](http://dockerfile.github.io/#/ubuntu)
 
 
-## Elogbana
+## ELK
 
 is a dock with logstash, elasticsearch, and kibana parsing all logs in your /data.
 You can use json ressources and init script to create a Shakespeare lucene and test it with Shakespeare's kibana dashboad.
