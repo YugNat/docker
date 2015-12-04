@@ -7,9 +7,7 @@ MAINTAINER YugNat
 RUN curl http://netcologne.dl.sourceforge.net/project/jobscheduler/jobscheduler_linux-x64.1.10.0.tar.gz | tar xzC /opt/
 
 # Add conf files.
-ADD conf/jobscheduler_install.xml /root
-
-# Add start script
+ADD conf/jobscheduler_install.xml /root/jobscheduler_install.xml
 
 # Start installation
 RUN /opt/jobscheduler.1.10.0/setup.sh /root/jobscheduler_install.xml

@@ -1,0 +1,22 @@
+elastic:
+  build: elastic/.
+  container_name: elastic
+
+logstash:
+  build: logstash/.
+  container_name: logstash
+  links:
+    - elastic:elasticsearch
+  volumes:
+    - /data:/data
+  links:
+    - elastic
+  command: logstash -f /opt/logstash/conf/logstash.conf
+
+kibana:
+  build: kibana/.
+  container_name: kibana
+  links:
+    - elastic:elasticsearch
+  ports:
+    - "80:5601"
