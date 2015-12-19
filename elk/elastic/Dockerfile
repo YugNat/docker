@@ -1,5 +1,5 @@
 # Pull base image.
-FROM java:7-jre
+FROM java:8-jre
 
 MAINTAINER YugNat
 
